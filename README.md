@@ -2,7 +2,7 @@
 <hr>
 
 ## API Data Analysis
-<p>In this repository, I'm gonna show you how you can get data from an API and display it in a table using <a href="https://pypi.org/project/prettytable/">PrettyTable</a> and the methode <strong>get</strong> </p>
+<p>In this repository, I'm gonna show you how you can get data from an API and display it in a table using <a href="https://pypi.org/project/prettytable/">PrettyTable</a> and the <strong>get</strong> method </p>
 
 #### So let's dive staight ☕
 
