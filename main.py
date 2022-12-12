@@ -1,15 +1,15 @@
 from prettytable import PrettyTable
 import requests
-import json
 
+api_url = 'https://dummyjson.com/products/'
 
-def displayDataTable(api_url):
+def displayDataTable():
     response = requests.get(api_url)
 
     if(response.status_code != 200):
-        return "Request failed with status code: " + response.status_code
+        return "Request failed with status code: ", + response.status_code
     else:
-        data = json.loads(response.text)
+        data = response.json()
         products = data['products']
 
         #Create the table
@@ -27,6 +27,6 @@ def displayDataTable(api_url):
             table.field_names = ['title', 'brand', 'category', 'rating', 'stock', 'price']
             table.add_row([title, brand, category, rating, stock, price])
 
-        # return table
+        return table
 
-print(displayDataTable('https://dummyjson.com/products'))
+print(displayDataTable())
